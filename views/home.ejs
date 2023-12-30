@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout{
+            height: 20px;
+            width: 100px;
+            background-color: rgb(189, 189, 214);
+            position: absolute;
+            top: 30px;
+            left: 80%;
+            text-align: center;
+        }
+        .logout:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>welcome to the home page</h1>
+    <br><h2>list of users</h2><br>
+    <ul>
+        <a href="/logout" class="logout">Logout</a>
+        <% users.forEach((user) => { %>
+        <li><%= user.firstName + " " + user.seconName %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
